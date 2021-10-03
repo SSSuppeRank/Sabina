@@ -114,6 +114,10 @@ body {
   background-color: #fff;
 }
 
+/* html {
+  overflow-x: hidden;
+} */
+
 /* textarea {
   background-color: #202027;
   border: 1px solid #2E3852;

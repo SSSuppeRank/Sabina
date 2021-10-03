@@ -16,31 +16,34 @@
         <img src="images/2702761.png">
         <div class="brand-logo-name">Kuandyk Sultaniyar</div>
       </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="main.php">Main</a></li>
-          <li><a href="blog.php">Blog</a></li>
-          <li><a href="chat.php">Chat</a></li>
-          <li><a href="contact.php">Contact</a></li>
-          <li><a href="personal.php">Personal</a></li>
-        </ul>
-      </nav>
     </header>
     <section class="join-main-section">
       <h1 class="join-text">
-        <span class="accent-text">Authorization</span>
+        <span class="accent-text">Registration</span>
       </h1>
-      <form class="join-form text-white" method="POST" action="check.php">
+      <form class="join-form text-white" method="POST" action="script/signUp.php">
         <div class="input-group">
-          <label>Email</label>
-          <input type="login" placeholder="Log in" name="login">
+          <label>Name:</label>
+          <input type="text" placeholder="Sultaniyar" name="name">
+        </div>
+        <div class="input-group">
+          <label>Surname:</label>
+          <input type="text" placeholder="Kuandyk" name="surname">
+        </div>
+        <div class="input-group">
+          <label>Email:</label>
+          <input type="email" placeholder="sultok.003@gmail.com" name="email">
         </div>
         <div class="input-group">
           <label>Password:</label>
-          <input type="password" placeholder="Password" name="pass" class="color-white">
+          <input type="password" placeholder="examplePass1!" name="pass1">
         </div>
         <div class="input-group">
-          <button type="submit" class="btn btn-outline-success">Authorization</button>
+          <label>Validate password:</label>
+          <input type="password" placeholder="expamplePass1!" name="pass2">
+        </div>
+        <div class="input-group">
+          <button type="submit" class="btn btn-outline-success">Registration</button>
         </div>
         <div class="alert alert-danges">
           <?php

@@ -6,9 +6,29 @@
     $login = $_POST["login"];
     $pass = $_POST["pass"];
 
-    if( $login == "sabinaproject7" && $pass == "sultokblog5" ) {
+    $link = mysqli_connect( "localhost", "root", "", "sabina" )
+      or die( "Error: " . mysqli_error( $link ) );
+
+    $query = "SELECT * FROM `users`";
+    $result = mysqli_query( $link, $query )
+      or die( "Error: " . mysqli_error( $link ) );
+
+    $count = 0;
+
+    while( $row = mysqli_fetch_array( $result ) ) {
+      if( $login == $row['userEmail'] && $pass = $row['userPassword'] ) {
+        $_SESSION['inSystem'] = true;
+        $_SESSION['userName'] = $row['userName'] . ' ' . $row['userSurname']; 
+        $_SESSION['userID'] = $row['userID'];
+        header( 'Location: chat.php' );
+        // echo $_SESSION['userName'];
+        $count++;
+      }
+    } 
+
+    if( $login == "sabinaproject7" && $pass == "sultokblog5" && $count++ ) {
       // чета надо сделать
-    } else {
+    } else if( $count == 0 ) {
       header( 'Location: personal.php' );
       $_SESSION['error'] = "Неверный логин или пароль (на английсском)";
     }

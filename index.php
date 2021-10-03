@@ -21,6 +21,7 @@
         <ul>
           <li><a href="main.php">Main</a></li>
           <li><a href="blog.php">Blog</a></li>
+          <li><a href="chat.php">Char</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="personal.php">Personal</a></li>
       </ul>

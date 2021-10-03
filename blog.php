@@ -27,6 +27,7 @@
       <ul>
         <li><a href="main.php">Main</a></li>
         <li><a href="blog.php">Blog</a></li>
+        <li><a href="chat.php">Chat</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="personal.php">Personal</a></li>
       </ul>
@@ -49,7 +50,6 @@
           echo '<div class="card-body">';
           echo '<h5 class="card-title">'. $row['postTitle'] . '</h5>';
           echo '<p class="card-text">' . $row['postContent'] . '</p>';
-          // echo '<a href="#" class="btn btn-outline-success">Go somewhere</a>';
           echo '</div>';
           echo '</div>';
         }
